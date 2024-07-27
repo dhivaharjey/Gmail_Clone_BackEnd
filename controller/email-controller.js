@@ -19,7 +19,7 @@ export const getEmails = async (req, response) => {
     } else if (req.params.type === "allmail") {
       email = await Email.find({});
     } else if (req.params.type === "starred") {
-      email = await Email.find({ starred: true, trash: false });
+      email = await Email.find({ starred: true, trash: false }):
     } else if (req.params.type === "snooze") {
       email = await Email.find({ snooze: true, trash: false });
     } else {
